@@ -1,0 +1,344 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #e8532e;
+    --border-color: #dbdbdb;
+    --growth-From: 0.5;
+    --growth-To: 1;
+
+    --navbar-height: 39px;
+    --header-height: 120px;
+    --header__sort-bar-height: 46px;
+
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* RESPONSIVE */
+
+/* .grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%;
+}
+
+.gird__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+} */
+
+/* test respponsive */
+
+/* .grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.667%;
+}
+
+.grid__column-2-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.333%;
+} */
+
+/* Animation */
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growUp {
+    form {
+        transform: scale(var(--growth-From));
+    }
+    to {
+        transform: scale(var(--growth-To));
+    }
+}
+
+/* Modal layout */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: none;
+    animation: fadeIn linear 0.2s;
+    z-index: 2;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0 , 0.4);
+    z-index: 1;
+}
+
+.modal__body {
+    margin: auto;
+    z-index: 3;
+    animation: growUp linear 0.2s;
+}
+
+.btn {
+    min-width: 120px;
+    height: 36px;
+    text-decoration: none;
+    border-radius: 3px;
+    border: none;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+    background-color: #fff;
+}
+
+.btn.btn-normal:hover {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disabled {
+    cursor: default;
+    background-color: #999;
+}
+
+.btn.btn--size-s {
+    height: 30px;
+    font-size: 12px;
+}
+
+
+/* Selection */
+
+.select-input {
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white-color);
+    position: relative;
+    z-index: 1;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input__list {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    right: 0;
+    padding: 8px 16px;
+    list-style: none;
+    background-color: var(--white-color);
+    display: none;
+}
+
+.select-input__list::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: -4px;
+    left: 0;
+    height: 5px;
+}
+
+.select-input__link {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    font-size: 1.4rem;
+    padding: 5px 0px;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+
+
+/* PAGNATION */
+
+.pagnation {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.pagnation-item {
+    margin: 0 12px;
+}
+
+.pagnation-item--actived .pagnation-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagnation-item--actived .pagnation-item__link:hover {
+    background-color: var(--primary-color);
+    filter: brightness(90%);
+}
+
+.pagnation-item__link {
+    --height: 30px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
