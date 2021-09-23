@@ -1483,7 +1483,7 @@ i.home-product-item__like-icon-fill {
 }
 
 .footer__bottom-background {
-    background-image: url('./assets/img/app.png');
+    background-image: url('../../assets/img/app.png');
 }
 
 .footer__bottom-bct {
